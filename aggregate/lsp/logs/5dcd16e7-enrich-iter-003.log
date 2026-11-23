@@ -1,0 +1,31 @@
+[2026-11-23T18:32:59Z] === ENRICH ITERATION 3 START | repo=huggingface/accelerate sha=5dcd16e7 ===
+[2026-11-23T18:32:59Z] [iter=3] PHASE START: enrich repo=huggingface/accelerate sha=5dcd16e7 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/5dcd16e7-enrich-iter-003.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/5dcd16e78969a79c65f34b4abbaad7bb0bdc53b4.nq.gz
+[2026-11-23T18:32:59Z] [iter=3] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-11-23T18:33:17Z] [iter=3] AST store loaded triples=2265764 load_secs=18 mem_mb=923 MB
+[2026-11-23T18:33:17Z] [iter=3] Step 2: Finding LSP targets mem_mb=923 MB
+[2026-11-23T18:33:22Z] [iter=3] LSP targets found call_sites=17461 imports=1629 extends=129 implements=0 secs=5
+[2026-11-23T18:33:29Z] [iter=3] Loaded checkpoint partial graph triples=110971
+[2026-11-23T18:33:29Z] [iter=3] Primed enclosing-def cache from persisted triples entries=1220
+[2026-11-23T18:33:33Z] [iter=3] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=923 MB
+[2026-11-23T18:33:48Z] [iter=3] Position index built positions=153447 nodes_with_types=199579 secs=15 mem_mb=923 MB
+[2026-11-23T18:33:48Z] [iter=3] Step 3: Starting LSP resolution mem_mb=923 MB already_completed_types=[] already_completed_files=137
+[2026-11-23T18:33:48Z] [iter=3] Resolving target type target_type=call_site count=17461
+[2026-11-23T18:33:49Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=0.8 files_done=0 resolved=0 errors=0 current=src/accelerate/utils/bnb.py
+[2026-11-23T18:35:42Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=2.7 files_done=3 resolved=56 errors=0 current=manim_animations/dataloaders/stage_1.py
+[2026-11-23T18:36:50Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=3.9 files_done=9 resolved=154 errors=0 current=benchmarks/fp8/ms_amp/distrib_deepspeed.py
+[2026-11-23T18:37:22Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=4.4 files_done=12 resolved=226 errors=0 current=examples/by_feature/memory.py
+[2026-11-23T18:38:03Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=5.1 files_done=14 resolved=268 errors=0 current=examples/by_feature/automatic_gradient_accumulation.py
+[2026-11-23T18:38:41Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=5.7 files_done=17 resolved=326 errors=0 current=src/accelerate/commands/merge.py
+[2026-11-23T18:39:17Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=6.3 files_done=19 resolved=386 errors=0 current=benchmarks/fp8/ms_amp/ddp.py
+[2026-11-23T18:39:51Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=6.9 files_done=25 resolved=464 errors=0 current=benchmarks/fp8/torchao/ddp.py
+[2026-11-23T18:40:38Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=7.6 files_done=26 resolved=489 errors=0 current=examples/multigpu_remote_launcher.py
+[2026-11-23T18:41:09Z] [iter=3] HEARTBEAT target_type=call_site elapsed_min=8.2 files_done=41 resolved=548 errors=0 current=src/accelerate/local_sgd.py
+[2026-11-23T18:41:21Z] [iter=3] Target type resolved target_type=call_site resolved=560 errors=0 secs=453 mem_mb=923 MB
+[2026-11-23T18:41:21Z] [iter=3] Resolving target type target_type=import_statement count=1629
+[2026-11-23T18:41:24Z] [iter=3] Target type resolved target_type=import_statement resolved=131 errors=0 secs=3 mem_mb=923 MB
+[2026-11-23T18:41:24Z] [iter=3] Resolving target type target_type=extends_clause count=129
+[2026-11-23T18:41:25Z] [iter=3] Target type resolved target_type=extends_clause resolved=1 errors=0 secs=1 mem_mb=923 MB
+[2026-11-23T19:25:09Z] [iter=3] Step 5: Writing final enrichment file triples=151503
+[2026-11-23T19:25:11Z] [iter=3] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/5dcd16e78969a79c65f34b4abbaad7bb0bdc53b4.nq.gz size_kb=3547
+[2026-11-23T19:25:11Z] [iter=3] Checkpoint cleared (enrichment complete)
+[2026-11-23T19:25:11Z] [iter=3] PHASE END: enrich elapsed_s=3132 elapsed_min=52.2 total_triples=151503
